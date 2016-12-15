@@ -160,10 +160,10 @@ Transport.prototype.request = function (params, cb) {
     ret.abort = abortRequest;
   }
 
-  if (body && params.method === 'GET') {
-    _.nextTick(respond, new TypeError('Body can not be sent with method "GET"'));
-    return ret;
-  }
+  // if (body && params.method === 'GET') {
+  //   _.nextTick(respond, new TypeError('Body can not be sent with method "GET"'));
+  //   return ret;
+  // }
 
   // serialize the body
   if (body) {
